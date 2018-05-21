@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Check when  date should not be past</description>
+        <field>u_when_needed</field>
+        <global>true</global>
+        <messages/>
+        <name>NeedIt onChange DateExample</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   } else if(oldValue === '') {
+	  // alert("oldvalue s null");
+		var currentDateNum = new Date(newValue).getTime();
+		var today = new Date().getTime();
+		if(currentDateNum < today) {
+			alert('start date cannot be past');
+			g_form.setValue('u_when_needed','');
+			return false;
+		}
+	} else {
+		var oldDateNum = new Date(oldValue).getTime();
+		var newDateNum = new Date(newValue).getTime();
+		////alert("new date " + newDateNum + " sta " + oldDateNum);
+		if(newDateNum < oldDateNum) {
+			alert("start date can't be past ");
+			g_form.setValue('u_when_needed',oldValue);
+			return false;
+		}
+	}
+	/*var currentDateObj = new Date();
+	var currentDateStr = formatDate(currentDateObj,g_user_date_format);
+	var currentDateNum = getDateFromFormat(currentDateStr, g_user_date_format);
+	var startDateNum = getDateFromFormat(newValue, g_user_date_format);
+	//alert("start " + startDateNum + " curr " + currentDateNum + " new Value Is : " + newValue + "\n currentobj " + currentDateObj);
+	alert(new Date(newValue).getTime() + " prevous " + oldValue);
+	alert(currentDateStr + "\n " + currentDateNum + "\n " + startDateNum);
+	if(startDateNum >= currentDateNum ) {
+		alert("Wrong Choice ");
+		return false;
+	}
+	*/
+	
+	
+//    //Type appropriate comment here, and begin script below
+//     var currentDate = new Date();
+// 	var str = formatDate(currentDate, g_user_date_format);
+// 	alert("CurrentDate " + currentDate + "\n string" + str);
+// 	var dateFormat = getDateFromFormat(str, g_user_date_format);
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-05-11 09:20:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>74ab8f3cdb02130067335740cf96191c</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>NeedIt onChange DateExample</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_client_74ab8f3cdb02130067335740cf96191c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-05-16 08:50:54</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
