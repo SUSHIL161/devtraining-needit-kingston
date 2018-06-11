@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Employee " max_length="40" name="x_218981_hello_wor_employee" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Employee First Name" max_length="40" name="x_58872_needit_u_emp_firstname" type="string"/>
+    </element>
+</database>
