@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_index">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
     <sys_index action="INSERT_OR_UPDATE">
         <col_name_string>short_description</col_name_string>
         <index_col_name element="short_description" name="task">c47df166b92013006517ce7df7ee46d1</index_col_name>

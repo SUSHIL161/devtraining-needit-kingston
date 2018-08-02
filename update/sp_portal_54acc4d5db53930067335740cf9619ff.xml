@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sp_portal">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
     <sp_portal action="INSERT_OR_UPDATE">
         <css_variables>$brand-primary: #48424c;
 $body-bg: #fff;
@@ -64,6 +63,7 @@ $text-muted: #646567;
         <image_width>15</image_width>
         <size_bytes>665</size_bytes>
         <size_compressed>688</size_compressed>
+        <state/>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-13 10:08:11</sys_created_on>
         <sys_id>dd4f4cd5db53930067335740cf961955</sys_id>
@@ -101,6 +101,7 @@ $text-muted: #646567;
         <image_width>504</image_width>
         <size_bytes>38250</size_bytes>
         <size_compressed>37902</size_compressed>
+        <state/>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-07-13 10:08:05</sys_created_on>
         <sys_id>084f44d5db53930067335740cf961973</sys_id>
